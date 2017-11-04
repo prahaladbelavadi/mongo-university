@@ -7,11 +7,13 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
 app.get('/', function(req, res) {
-    res.render('hello', { name : 'Templates' });
+    res.render('hello', {
+        name: 'Templates'
+    });
 });
 
-app.use(function(req, res){
-    res.sendStatus(404); 
+app.use(function(req, res) {
+    res.sendStatus(404);
 });
 
 var server = app.listen(3000, function() {
